@@ -4,19 +4,19 @@ CREATE TABLE customer (
      last_name     VARCHAR(20) NOT NULL,
      first_name    VARCHAR(18) NOT NULL,
      email         VARCHAR(18) NOT NULL,
-     phone_number  NUMBER
+     phone_number  NUMBER,
      allergy       VARCHAR(18) NOT NULL,
      street        VARCHAR(18) NOT NULL,
      city          VARCHAR(18) NOT NULL,
      state         VARCHAR(18) NOT NULL,
-     zipcode       NUMBER
+     zipcode       NUMBER,
      service_type  VARCHAR(18) NOT NULL,
      language      VARCHAR(18) NOT NULL
 ) ;
 
 --Creating Jobs Table
 CREATE TABLE job (
-     job_id		VARCHAR(10) NOT NULL,
+     job_id		    VARCHAR(10) NOT NULL,
      job_description    VARCHAR(20) NOT NULL,
      start              DATE,
      end                DATE,
@@ -25,19 +25,19 @@ CREATE TABLE job (
 
 --Creating Babysitters Table
 CREATE TABLE babysitter (
-     babysitter_id		VARCHAR(10) NOT NULL,
-     first_name         	VARCHAR(18) NOT NULL,
-     last_name          	VARCHAR(18) NOT NULL,
-     street             	VARCHAR(18) NOT NULL,
-     city               	VARCHAR(18) NOT NULL,
-     state              	VARCHAR(18) NOT NULL,
-     zipcode            	NUMBER
-     DOB                	DATE
-     gender             	VARCHAR(18) NOT NULL,
-     transportation     	VARCHAR(18) NOT NULL,
-     COVID_concerns     	VARCHAR(18) NOT NULL,
-     years_of_experience 	NUMBER
-     days_available     	VARCHAR(18) NOT NULL
+     babysitter_id		     VARCHAR(10) NOT NULL,
+     first_name          	VARCHAR(18) NOT NULL,
+     last_name           	VARCHAR(18) NOT NULL,
+     street              	VARCHAR(18) NOT NULL,
+     city                	VARCHAR(18) NOT NULL,
+     state               	VARCHAR(18) NOT NULL,
+     zipcode              	NUMBER,
+     DOB                	     DATE,
+     gender             	     VARCHAR(18) NOT NULL,
+     transportation     	     VARCHAR(18) NOT NULL,
+     COVID_concerns     	     VARCHAR(18) NOT NULL,
+     years_of_experience 	NUMBER,
+     days_available     	     VARCHAR(18) NOT NULL
 ) ;
 
 --Creating Skills Table

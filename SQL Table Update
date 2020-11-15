@@ -35,7 +35,7 @@ CREATE TABLE Customer_Requirements
 
 CREATE TABLE Skills
 (
-     SkillID                          NUMBER NOT NULL
+     SkillID                          NUMBER NOT NULL,
      CONSTRAINT pk_Skills             PRIMARY KEY,
      Skill_Description                VARCHAR(200) NOT NULL
 ) ;

@@ -1,0 +1,70 @@
+CREATE TABLE Zipcodes
+(
+     Zipcode                         NUMBER NOT NULL,
+     CONSTRAINT pk_Zipcodes          PRIMARY KEY,
+     City                            VARCHAR(15) NOT NULL,
+     State                           VARCHAR(3) NOT NULL
+) ;
+
+
+CREATE TABLE Customers
+(
+     CustomerID                      NUMBER NOT NULL,
+     CONSTRAINT pk_Customers         PRIMARY KEY,
+     First_Name                      VARCHAR(35) NOT NULL,
+     Last_Name                       VARCHAR(35) NOT NULL,
+     Email                           VARCHAR(50) NOT NULL,
+     Phone_Number                    NUMBER NOT NULL,
+     Allergies                       VARCHAR(100),
+     Street                          VARCHAR(75) NOT NULL,
+     Zipcode                         NUMBER NOT NULL,
+     Service_Type                    VARCHAR(75),
+     Language                        VARCHAR(50)
+) ;
+
+
+CREATE TABLE Customer_Requirements
+(
+     RequirementID                                   NUMBER NOT NULL,
+     CONSTRAINT pk_Customer_Requirements             PRIMARY KEY,
+     Years_of_Experience                             NUMBER,
+     Time_of_Day                                     VARCHAR(50) NOT NULL,
+     CustomerID                                      NUMBER NOT NULL
+) ;
+
+
+CREATE TABLE Skills
+(
+     SkillID                          NUMBER NOT NULL
+     CONSTRAINT pk_Skills             PRIMARY KEY,
+     Skill_Description                VARCHAR(200) NOT NULL
+) ;
+
+
+CREATE TABLE Babysitters
+(
+     BabysitterID                     NUMBER NOT NULL,
+     CONSTRAINT pk_Babysitters        PRIMARY KEY,
+     First_Name                       VARCHAR(35) NOT NULL,
+     Last_Name                        VARCHAR(35) NOT NULL,
+     Date_of_Birth                    DATE,
+     Gender                           VARCHAR(25),
+     Street                           VARCHAR(75) NOT NULL,
+     Zipcode                          NUMBER NOT NULL,
+     Transportation                   VARCHAR(50),
+     COVID_Concerns                   VARCHAR(100) NOT NULL,
+     Years_of_Experience              NUMBER,
+     Days_Available                   VARCHAR(25)
+) ;
+
+
+CREATE TABLE Jobs
+(
+     JobID                            NUMBER NOT NULL,
+     CONSTRAINT pk_Jobs               PRIMARY KEY,
+     JobDescription                   VARCHAR(100),
+     Start_Date                       DATE,
+     End_Date                         DATE,
+     Wages                            NUMBER,
+     BabysitterID                     NUMBER NOT NULL
+) ;
